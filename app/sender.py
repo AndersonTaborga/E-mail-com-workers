@@ -1,8 +1,8 @@
-import psycopg2
+import psycopg2 
 from bottle import route, run, request
 
 DSN = 'dbname=email_sender user=postgres host=db'
-SQl = 'INSERT INTO emails (assunto, mensagem) VALUES (%s, %s)'
+SQL = 'INSERT INTO emails (assunto, mensagem) VALUES (%s, %s)'
 
 def register_message(assunto, mensagem):
     conn = psycopg2.connect(DSN)
