@@ -1,6 +1,6 @@
 # E-mail com workers
 
-Esse projeto é sender de e-mails em python, postgres, redis e worker em Docker.
+Esse projeto é um sender de e-mails em python, postgres, redis e worker em Docker.
 
 ## Getting Started
 
