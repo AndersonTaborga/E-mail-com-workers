@@ -43,17 +43,22 @@ services:
     depends_on:
       - db
       - queue
+    environment:
+      - DB_NAME=abc_email_sender
   queue:
     image: redis:3.2
     networks:
       - fila
   worker:
-    image: python:3.6
+  # Build procura o Dockerfile na pasta worker
+    build: worker
     volumes:
     # Worker
       - ./worker:/worker
     working_dir: /worker
-    command: bash ./app.sh
+    # Remove o bash porque já está sendo feito no Dockerfile
+    # Command está sendo passado como parametro para o entrypoint no Dockerfile
+    command: worker.py
     networks:
       - fila
     depends_on:

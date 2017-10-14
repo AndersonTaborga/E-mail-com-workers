@@ -1,0 +1,6 @@
+# Tudo que estiver aqui, sobreescrece o arquivo original do docker-compose.yml
+version: '3'
+services:
+  app:
+    environment:
+      - DB_NAME=email_sender
