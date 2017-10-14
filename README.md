@@ -12,7 +12,7 @@ Ver os logs `docker-compose logs -f -t`
 
 Ver os logs com escalonamento `docker-compose logs -f -t worker`
 
-Efetuar um select no banco de dados postgres `docker-compose exec db psql -U postgres -d email_sender -c 'select * from emails'`
+Select `docker-compose exec db psql -U postgres -d email_sender -c 'select * from emails'`
 
 ### Prerequisites
 
